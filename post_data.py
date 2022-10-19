@@ -36,7 +36,17 @@ post_data = [
         "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
     }, ]
 
+# for data in post_data:
+#     url = data.get('title')
+#     new_url = url.replace(" ", "-").strip("-")
+#     data.update({'slug': new_url})
+
 for data in post_data:
-    data.update({'url': 'slug'})
-    print(data)
+    url = data.get('title')
+    modifiedurl = url.replace(" ", "-").strip("-")
+    data.update({'slug': modifiedurl})
+
+print(post_data[4])
+
+
 
