@@ -35,14 +35,8 @@ post_data = [
         "title": "dolorem eum magni eos aperiam quia ",
         "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
     }, ]
-keys=[]
-for post in post_data:
 
+for data in post_data:
+    data.update({'url': 'slug'})
+    print(data)
 
-    new_keys = 'Slug :'
-    keys.append(new_keys)
-    txt =f'{keys}'
-    url= post.get('title')
-    new_url=url.replace(" ","-").strip("-")
-    post_data.append((txt)+(new_url))
-    print(post_data[4])
